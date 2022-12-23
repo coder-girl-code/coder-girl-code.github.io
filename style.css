@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Silkscreen&display=swap');
+:root{
+    --background_color:bisque;
+}
+body{
+    color: rgb(246, 30, 246);
+    font-family: 'Fuzzy Bubbles', cursive;
+    margin:0;
+}
+img{
+    height:300px;
+}
+.instrument{
+    background-color:var(--background_color);
+    width: 400px;
+    padding: 5px 15px 10px 15px;
+    border: 10px dotted mediumvioletred;
+    border-width: 5px;
+    margin-top: 50px;
+    transition: transform 2s ease .5s, border 2s ease .5s;
+}
+.instrument:hover{
+    transform: rotate(15deg) scale(1.1);
+    border: 20px double rgb(187, 17, 255);
+}
+
+.instrument img{
+    width: 400px;
+    
+}
+.instruments{
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.container{
+    background-color:var(--background_color);
+    display:grid;
+    height:170vh;
+    grid-template-rows: 15% 70% 15%;
+    grid-template-areas:
+    "header"
+    "content"
+    "footer"
+}
+
+.header{
+    background-color: #05445E;
+    grid-area: header;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    animation-name: colorchange;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      
+    }
+    
+    @keyframes colorchange {
+  0% {background-image: radial-gradient(rgb(247, 109, 125),rgb(247, 45, 220, 0.827));}
+  25% {background-image: radial-gradient(rgb(32, 117, 178), rgb(24, 196, 73));}
+  50% {background-image: radial-gradient(rgb(255, 184, 248), rgb(214, 93, 75));}
+  75% {background-image: radial-gradient(rgb(212, 187, 250), rgb(161, 67, 192));}
+  100% {background-image: radial-gradient(rgb(235, 227, 21), rgb(147, 111, 3));}
+}
+.content{
+    background-color: #189AB4;
+    grid-area: content;
+}
+.footer{
+    background-color: #75E6DA;
+    grid-area: footer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav{
+    padding: 10px;
+    transition: background-color 0.6s ease-in-out .1s;
+}
+
+a{
+    text-decoration: none;
+}
+a:link{
+    color: black;
+}
+.nav:hover{
+    background-color: rgb(244, 35, 164);
+    color: darksalmon;
+}
+
+@media only screen and (max-width : 400px){
+    .container{
+    height:575vh;
+    grid-template-rows: 5% 90% 5%;
+    }
+    .footer{
+        flex-wrap: wrap;
+    }
+}
