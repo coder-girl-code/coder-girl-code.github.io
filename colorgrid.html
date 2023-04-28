@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>Grid Colouring</title>
+    
+    <style>
+      
+      .grid{
+      display: flex;
+      }
+      
+      .box{
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+
+      }
+      
+      h5{
+        cursor: pointer;
+      }
+
+      .color{
+        height: 100px;
+        width: 100px;
+      }
+      
+    </style>
+    
+  </head>
+  <body id="body">
+    
+    <h3>Pick your desired color and fill the grid</h3>
+    <input type="color" id="colorInput" class="color">
+  
+    <div class="grid">
+     <div class="box" onclick="setBgColor(this)"></div>
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    <div class="grid">
+     <div class="box" onclick="setBgColor(this)"></div>
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    <div class="grid">
+     <div class="box" onclick="setBgColor(this)"></div>
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    <div class="grid">
+        <div class="box" onclick="setBgColor(this)"></div>
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    <div class="grid">
+        <div class="box" onclick="setBgColor(this)"></div>
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    <div class="grid">
+        <div class="box" onclick="setBgColor(this)"></div>
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    <h2 id="selectedColor"></h2>
+  
+    <script>
+      
+      var penColor = 'black';
+      
+      function setPenColor(pen)
+      {
+        penColor = pen;
+      }
+     
+      sc = document.getElementById("selectedColor");
+
+      function setBgColor(boxColor)
+      {
+        var color = document.getElementById("colorInput").value;
+        boxColor.style.backgroundColor = color;
+        sc.innerHTML = "Picked Color :" + color;
+      }
+      
+    </script>
+    
+  </body>
+</html>
