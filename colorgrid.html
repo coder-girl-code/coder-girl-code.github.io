@@ -31,9 +31,11 @@
     
     <h3>Pick your desired color and fill the grid</h3>
     <input type="color" id="colorInput" class="color">
+    <input type="color" id="colorInput2" class="color">
+    <button id="reset" onclick="onButtonPress()">Reset</button>
   
     <div class="grid">
-     <div class="box" onclick="setBgColor(this)"></div>
+     <div id="box1" class="box" onclick="setBgColor(this)"></div>
      <div class="box" onclick="setBgColor(this)"></div> 
      <div class="box" onclick="setBgColor(this)"></div> 
      <div class="box" onclick="setBgColor(this)"></div> 
@@ -49,12 +51,12 @@
      <div class="box" onclick="setBgColor(this)"></div> 
     </div>
     <div class="grid">
-     <div class="box" onclick="setBgColor(this)"></div>
-     <div class="box" onclick="setBgColor(this)"></div> 
-     <div class="box" onclick="setBgColor(this)"></div> 
-     <div class="box" onclick="setBgColor(this)"></div> 
-     <div class="box" onclick="setBgColor(this)"></div> 
-     <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div>
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
+        <div class="box" onclick="setBgColor(this)"></div> 
     </div>
     <div class="grid">
         <div class="box" onclick="setBgColor(this)"></div>
@@ -96,8 +98,22 @@
       function setBgColor(boxColor)
       {
         var color = document.getElementById("colorInput").value;
-        boxColor.style.backgroundColor = color;
+        var color2 = document.getElementById("colorInput2").value;
+        boxColor.style.backgroundImage = 'linear-gradient('+color+','+color2+')';
         sc.innerHTML = "Picked Color :" + color;
+        sc.innerHTML += "<br>Second Picked Color :" + color2;
+      }
+      function onButtonPress()
+      {
+        boxes = document.querySelectorAll('.box');
+        console.log(boxes);
+        console.log("Clicked Reset");
+
+        for(x=0;x<boxes.length;x++){
+          boxes[x].style.backgroundColor = 'white';
+          boxes[x].style.backgroundImage = 'none'
+        }
+
       }
       
     </script>
