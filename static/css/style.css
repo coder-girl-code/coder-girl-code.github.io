@@ -69,6 +69,11 @@ img{
     transform: rotate(15deg) scale(1.2);
     border: 15px double rgb(56, 157, 239);
 }
+.app{
+    margin:auto;
+    width:75%;
+    color: white;
+}
 .center {
     display: block;
     margin-left: auto;
@@ -78,8 +83,7 @@ img{
 .container{
     background-color:var(--background_color);
     display:grid;
-    height:170vh;
-    grid-template-rows: 15% 70% 15%;
+    grid-template-rows: 300px auto 300px;
     grid-template-areas:
     "header"
     "content"
@@ -92,9 +96,9 @@ img{
     justify-content: center;
     align-items: center;
     color: rgb(0, 0, 0);
-    animation-name: colorchange;
+    /* animation-name: colorchange;
       animation-duration: 4s;
-      animation-iteration-count: infinite;
+      animation-iteration-count: infinite; */
       
     }
     
@@ -140,4 +144,23 @@ a:link{
     .footer{
         flex-wrap: wrap;
     }
+}
+
+form input[type='submit'] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(134, 207, 226);
+    color: rgb(0, 0, 0);
+    border-style:ridge;
+    cursor:grab;
+    
+}
+
+form input[type='submit'] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(134, 207, 226);
+    color: rgb(0, 0, 0);
+    border-style:ridge;
+    cursor:grab;
 }

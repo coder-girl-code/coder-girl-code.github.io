@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="app">
+    <h2>
+        {{name|greeting}} - {{time}}
+    </h2>
+    <p>
+        {{para|wordcount}} words, {{para|length}} characters, {{(para|wordcount)|reading_time}} minutes
+    </p>
+    <p>
+        {{para}}
+    </p>
+    <form action="/calculation" method="POST">
+        <label for="number">Enter a number:</label><br/>
+        <input type="number" id="number" name = "num" placeholder="Enter a number: " required><br/>
+        <input type="number" id="number" name = "num1" placeholder="Enter another number: " required><br/>
+        <input type="submit"> 
+    </form>
+    <p>
+        {% if addition %}
+        The sum of the numbers is, {{addition}}
+        {% endif %}
+    </p>
+</div>
+{% endblock %}
