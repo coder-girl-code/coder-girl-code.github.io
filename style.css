@@ -1,7 +1,88 @@
 body{
-    margin: 10px;
+    background: #ffeded;
+    margin: 20px;
 }
-img{
-    height:300px;
+h1{
+    color: blueviolet;
+    font-family: 'Sigmar', cursive;
+    text-align:center;
+    text-decoration: underline;
+}
+h2{
+    color: rgb(62, 62, 236);
+    font-family: 'Sigmar', cursive;
+    text-align:left;
+    text-decoration: underline; 
+    margin: 20px;
+}
+p{
+    color: rgb(47, 120, 184);
+    font-family: 'Sigmar', cursive;
+    text-align:left;
+    text-decoration: none;
+    margin: 20px;
+}
+.projects{
+    display:flex;
+    justify-content: space-around;
+    
+}
+.projects div{
+    display:flex;
+    max-width: 300px;
+    flex-direction: column;
+    border: 5px solid rgb(212, 137, 255);
+}
+.projects div img{
+    max-width: 300px;
+}
+.projects div a{
+    margin:auto;
+    font-size: 30px;
+    padding:10px;
+    font-family: 'Sigmar', cursive;
+    text-decoration: none;
+}
+.child{
+    width:50%;
+    margin-top: 10px;
 }
 
+.child div{
+    width: 15%;
+}
+
+.child div a{
+    font-size: 20px;
+}
+
+.webcam{
+    color: rgb(0, 0, 0);
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blueviolet;
+    align-items: center;
+    padding: 25px;
+    border-radius: 10%;
+}
+
+.webcam button{
+    align-self: center;
+    width: 200px;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    background-color: cornflowerblue;
+    margin-bottom: 20px;
+
+.webcam .label-container{
+    align-self: center;
+    
+}
+.label-container div{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: azure;
+    font-size: 20px;
+}
